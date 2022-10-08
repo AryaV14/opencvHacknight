@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Image To Text Web App</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,600" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="static/css/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="static/css/style.css" />
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		
+
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+			{% for category, message in messages %}
+			<div class="alert alert-{{ category }} alert-dismissible fade in" role="alert">
+				<a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>{{ message }}</strong>
+			</div>
+			{% endfor %}
+		{% endif %}
+		{% endwith %}
+
+		<div class="section-center">
+			<div class="container">
+
+				<div class="row justify-content-center">
+			    	<h2>Extract the Text Here</h2>
+			  	</div>
+
+				<div class="row">
+					<div class="booking-form">
+						<form action="\convert" method="post" enctype="multipart/form-data">
+
+
+
+							<div class="col-md-8">
+								<div class="form-group">
+									<input class="form-control" name="files[]" type="file" id="mulfile" multiple />
+									<span class="form-label">Please upload images</span>
+								</div>
+							</div>
+
+
+
+							<div class="col-md-2">
+								<div class="form-btn">
+									<button class="btn btn-success btn-lg" type="submit" value="Submit">Submit</button>
+								</div>
+							</div>
+						
+						</form>
+			
+		
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+        
+    </script>
+
+
+
+</body>
+
+</html>
