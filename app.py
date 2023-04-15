@@ -27,7 +27,6 @@ app.config['SESSION_TYPE'] = 'filesystem'
 TITLE         = "Image To Text Converter"
 FRAME_TITLE   = "Image To Text Converter"
 PURPOSE_TITLE = "Convert text within an image into PDF"
-GITHUB_LINK   = "https://github.com/nv-hiep/ML_end2end_projects/tree/main/img2text_ocr"
 
 
 # For uploading images
@@ -37,9 +36,6 @@ MAX_CONTENT_LENGTH = 1.5 * 1024 * 1024
 
 
 
-# pytesseract on Heroku (deployment ONLY)
-#pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
 
 
