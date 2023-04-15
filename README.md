@@ -1,1 +1,1 @@
-# opencvHacknight
+# Image to Text Converter
